@@ -1,0 +1,16 @@
+/* src/App.css */
+.App {
+  position: relative;
+  height: 100vh;
+}
+
+label {
+  display: block;
+  margin: 5px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+input {
+  margin-left: 5px;
+}
