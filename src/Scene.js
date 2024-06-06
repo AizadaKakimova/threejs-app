@@ -8,10 +8,6 @@ const Scene = () => {
   const [doorSize, setDoorSize] = useState({ width: 1, height: 2 });
 
   useEffect(() => {
-    createScene()
-  }, [doorSize]);
-
-  const createScene  = () => {
     const mount = mountRef.current;
 
     // Create scene
@@ -102,13 +98,16 @@ const Scene = () => {
       mount.removeChild(renderer.domElement);
 
     };
-  }
+  }, [doorSize]);
+
   const handleResize = (event) => {
+    console.log(event)
     const { name, value } = event.target;
     setDoorSize((prevSize) => ({
       ...prevSize,
       [name]: parseFloat(value),
     }));
+    console.log(doorSize)
   };
 
   return (
